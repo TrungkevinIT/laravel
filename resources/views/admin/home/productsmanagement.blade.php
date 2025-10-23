@@ -7,7 +7,7 @@
         <div class="card-header">
             Quản lý sản phẩm
         </div>
-        <a href="{{route("admin.home.createproduct")}}"><button>create</button></a> 
+        <a href="{{ route('admin.home.createproduct') }}"><button>create</button></a>
         <div class="card-body">
             <table class="table table-bordered table-striped">
                 <thead>
@@ -21,10 +21,20 @@
                 <tbody>
                     @foreach ($viewData['products'] as $product)
                         <tr>
-                            <td>{{ $product["id"] }}</td>
-                            <td>{{ $product["name"] }}</td>
-                            <td><button>Edit</button></td>
-                            <td><button>Delete</button></td>
+                            <td>{{ $product['id'] }}</td>
+                            <td>{{ $product['name'] }}</td>
+                            <td><button class="btn btn-primary">
+                                    <i class="bi-pencil"></i>
+                                </button></td>
+                            <td>
+                                <form action="{{route('admin.product.delete',['id' => $product->id])}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger">
+                                        <i class="bi-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

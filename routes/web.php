@@ -14,3 +14,4 @@ Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->na
 Route::get('/admin/productsmanagement', 'App\Http\Controllers\Admin\AdminHomeController@productsmanagement')->name("admin.home.productsmanagement");//trang ds san pham
 route::get('/admin/home/createproduct',[AdminHomeController::class,'createproduct'])->name('admin.home.createproduct');// trang them sp
 route::post('/admin/product/store', [AdminProductsController::class, 'store'])->name('admin.home.store');// them sp
+route::delete('/admin/product/delete/{id}', [AdminProductsController::class, 'delete'])->name('admin.product.delete');// xoa sp

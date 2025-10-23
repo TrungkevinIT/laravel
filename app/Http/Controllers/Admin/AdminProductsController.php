@@ -32,4 +32,11 @@ class AdminProductsController extends Controller
         $product->save();
        return redirect()->route('admin.home.productsmanagement')->with("success","them thanh cong!");
     }
+    public function delete($id){
+        Product::destroy($id);
+        return back();
+    }
+    public function edit(){
+
+    }
 }
