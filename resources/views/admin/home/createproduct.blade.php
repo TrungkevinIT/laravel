@@ -7,17 +7,25 @@
             <h3>Create Products</h3>
         </div>
         <div class="card-body">
-            <form action="{{}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route("admin.home.store")}}" method="POST" enctype="multipart/form-data">
                 @csrf 
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Name:</label>
+                        <label class="form-label">Tên:</label>
                         <input type="text" name="name" class="form-control" />
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Price:</label>
+                        <label class="form-label">Giá:</label>
                         <input type="number" name="price" class="form-control" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Khuyến mãi:</label>
+                        <input type="number" name="discount_percent" class="form-control" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Số Lượng:</label>
+                        <input type="number" name="in_stock" class="form-control" />
                     </div>
                 </div>
 

@@ -18,6 +18,7 @@ class ProductSeeder extends Seeder
             'name' => 'iPhone 15 Pro Max',
             'price' => 34990000,
             'in_stock' => true,
+            'description' => 'Mô tả chi tiết cho iPhone 15 Pro Max.',
             'discount_percent' => 10,
             'image' => 'images/iphone.jpg' // Giả sử ảnh nằm trong public/images/
         ]);
@@ -26,6 +27,7 @@ class ProductSeeder extends Seeder
             'name' => 'Samsung Galaxy S23 Ultra',
             'price' => 28990000,
             'in_stock' => true,
+            'description' => 'Mô tả chi tiết cho iPhone 15 Pro Max.',
             'discount_percent' => 5,
             'image' => 'images/samsung.jpg'
         ]);
@@ -34,6 +36,7 @@ class ProductSeeder extends Seeder
             'name' => 'Google Pixel 8 Pro',
             'price' => 24990000,
             'in_stock' => false, // Ví dụ sản phẩm này hết hàng
+            'description' => 'Mô tả chi tiết cho iPhone 15 Pro Max.',
             'discount_percent' => 0,
             'image' => 'images/pixel.jpg'
         ]);
